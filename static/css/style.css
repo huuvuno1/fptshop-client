@@ -49,7 +49,7 @@
 
 .banner {
     background-color: #5e0d0d;
-    background-image: url("../img/bg17-7mb.jpg");
+    background-image: url("../img/bg-17-7.png");
     background-repeat: no-repeat;
     background-size: 100%;
 }
@@ -178,10 +178,15 @@ body {
     border-radius: 5px;
     background-color: white;
     padding: 5px;
+    box-sizing: border-box;
 }
 
 .slide {
     position: relative;
+}
+#slide_img {
+    width: 795px;
+    height: 300px;
 }
 .slide_arrow {
     width: 48px;
@@ -234,9 +239,13 @@ body {
     flex-direction: column;
     align-items: center;
 }
-
+.baner_right {
+    margin-bottom: 2px;
+}
 .baner_right img {
     border-radius: 5px;
+    width: 383px;
+    height: 100px;
 }
 
 .short_news {
@@ -245,4 +254,77 @@ body {
 }
 .short_news-title{
     justify-content: space-between;
+    margin: 5px 0;
+}
+.hot_news {
+    padding: 10px 0px 0px 5px;
+}
+.hot_news:hover img{
+    border: 1px solid #5e0d0d;
+}
+.hot_news img{
+    width: 70px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #dee2e6;
+}
+
+.title_hot_news {
+    font-weight: bold;
+    font-size: 15px;
+    color: black;
+}
+
+.square {
+    width: 16.66666%;
+    height: 160px;
+    border-right: 1px solid #0000000d;
+    border-bottom: 1px solid #0000000d;
+    box-sizing: border-box;
+    justify-content: center;
+    padding: 15px;
+    flex-direction: column;
+    align-items: center;
+
+}
+.square:hover {
+    box-shadow: 0 1px 0px 0 rgb(0 0 0 / 20%), 0 4px 13px 0 rgb(0 0 0 / 19%);
+}
+.wrap_img {
+    background-color: #f4f4f4;
+    border-radius: 50%;
+    width: 95px;
+    height: 95px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.wrap_img img {
+    height: 60px;
+}
+.frame_category {
+    border-radius: 5px;
+    background-color: white;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+.cate_name {
+    color: black;
+    font-size: 15px;
+}
+
+.w3-animate-right{
+    position: relative;
+    animation: animateright 1s
+}
+@keyframes animateright{
+    from {
+        right:0;
+        opacity:1
+    } 
+    to {
+        right:800px;
+        opacity:0
+    }
 }
