@@ -26,9 +26,9 @@ setInterval(() => {
 }, 1000)
 
 setInterval(() => {
-    document.getElementById("slide_img").src = listImage[iM];
-    iM = iM == listImage.length - 1 ? 0 : iM + 1;
-}, 3000)
+    
+    document.getElementById("slide_img").style = "animation: animateright 1s;"
+}, 5000)
 
 var iM = 0;
 const listImage = [
@@ -37,3 +37,11 @@ const listImage = [
     "./static/img/banner/637633657926617644_F_H1_800x300 THIET KE MAIN 5.jpg",
     "./static/img/banner/637638057406075035_F_H1_800x300.jpg"
 ]
+
+setInterval(() => {
+    document.querySelector('.wrap-img-slide')
+        .innerHTML = `<img id="slide_img" class="arrive_animate" src="${listImage[iM]}" alt="">`
+    iM++;
+    if (iM >= listImage.length)
+        iM = 0;
+}, 5200)

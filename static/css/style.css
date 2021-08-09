@@ -183,10 +183,12 @@ body {
 
 .slide {
     position: relative;
+    overflow-x: hidden;
 }
 #slide_img {
     width: 795px;
     height: 300px;
+    position: relative;
 }
 .slide_arrow {
     width: 48px;
@@ -202,6 +204,7 @@ body {
     transform: translateY(-50%);
     cursor: pointer;
     border: 1px solid #a7a7b1;
+    z-index: 999;
 }
 .slide_arrow i {
     line-height: 48px;
@@ -314,9 +317,8 @@ body {
     font-size: 15px;
 }
 
-.w3-animate-right{
-    position: relative;
-    animation: animateright 1s
+.leave_aimate{
+    animation: animateright 1s;
 }
 @keyframes animateright{
     from {
@@ -326,5 +328,20 @@ body {
     to {
         right:800px;
         opacity:0
+    }
+}
+
+.arrive_animate {
+    animation: out_in 1s;
+}
+
+@keyframes out_in {
+    from {
+        right: -800px;
+        opacity: 0;
+    }
+    to {
+        right: 0;
+        opacity: 1;
     }
 }
