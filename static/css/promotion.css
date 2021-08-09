@@ -1,3 +1,52 @@
 .promotion_frame {
     height: 550px;
+    padding: 25px 10px 10px 10px;
+    flex-direction: column;
+}
+.title {
+    display: flex;
+}
+.promotion_frame .title h2, .promotion_frame .title i{
+    font-size: 23px;
+    color: #d61817;
+    margin-bottom: 30px;
+}
+
+.promotion_frame .title i{
+    margin-right: 10px;
+}
+.products {
+    box-sizing: border-box;
+    
+}
+#slide_proc {
+    overflow-y: scroll;
+    overflow-y: hidden;
+}
+.products::-webkit-scrollbar {
+    display: none;
+}
+.product {
+    cursor: pointer;
+    width: 300px;
+    min-width: 300px;
+    padding: 5px;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+
+.sale_proc {
+    background-image: url("../img/banner/frame-khuyenmai.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.product_img {
+    display: flex;
+    justify-content: center;
+    height: 276px;
+}
+
+.product_img img{
+    margin-top: 33px;
+    max-height: 168px;
 }

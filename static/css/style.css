@@ -339,7 +339,18 @@ body {
 .banner_middle {
     height: 200px;
 }
-
+.banner_middle img {
+    border-radius: 5px;
+}
+.banner_bot {
+    justify-content: space-between;
+    background-color: transparent;
+}
+.banner_bot img {
+    border-radius: 5px;
+    width: 590px;
+    height: 160px;
+}
 /* sale_middle */
 .sale_middle {
     height: 800px;
