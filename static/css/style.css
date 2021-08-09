@@ -47,11 +47,12 @@
     display: flex;
 }
 
-.banner {
+.app {
     background-color: #5e0d0d;
     background-image: url("../img/bg-17-7.png");
     background-repeat: no-repeat;
     background-size: 100%;
+    padding-bottom: 30px;
 }
 .pc-logo {
     width: 187px;
@@ -177,8 +178,12 @@ body {
 .frame {
     border-radius: 5px;
     background-color: white;
-    padding: 5px;
     box-sizing: border-box;
+    margin-bottom: 30px;
+}
+
+.banner_frame {
+    padding: 5px;
 }
 
 .slide {
@@ -307,18 +312,16 @@ body {
     height: 60px;
 }
 .frame_category {
-    border-radius: 5px;
-    background-color: white;
     flex-wrap: wrap;
-    margin-top: 30px;
 }
 .cate_name {
     color: black;
     font-size: 15px;
 }
 
-.leave_aimate{
+.leave_animate{
     animation: animateright 1s;
+    animation-delay: 4s;
 }
 @keyframes animateright{
     from {
@@ -331,17 +334,52 @@ body {
     }
 }
 
-.arrive_animate {
-    animation: out_in 1s;
+
+/* banner middle */
+.banner_middle {
+    height: 200px;
 }
 
-@keyframes out_in {
-    from {
-        right: -800px;
-        opacity: 0;
-    }
-    to {
-        right: 0;
-        opacity: 1;
-    }
+/* sale_middle */
+.sale_middle {
+    height: 800px;
+}
+
+/* discount_phone */
+.discount_phone {
+    height: 1028px;
+}
+
+/* discount_laptop */
+.discount_laptop {
+    height: 1028px;
+}
+
+/* accessory_frame */
+.accessory_frame {
+    height: 320px;
+}
+
+.other_frame {
+    height: 115px;
+    justify-content: space-between;
+}
+.otf {
+    background-color: white;
+    width: 394px;
+    border-radius: 7px;
+}
+
+.footer {
+    height: 330px;
+    background-color: white;
+}
+
+.footer-top {
+    height: 282px;
+}
+
+.footer-bottom {
+    background-color: #f2f2f2;
+    height: calc(100% - 282px)
 }

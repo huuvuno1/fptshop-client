@@ -25,10 +25,6 @@ setInterval(() => {
     eSecond.innerText = second;
 }, 1000)
 
-setInterval(() => {
-    
-    document.getElementById("slide_img").style = "animation: animateright 1s;"
-}, 5000)
 
 var iM = 0;
 const listImage = [
@@ -40,8 +36,8 @@ const listImage = [
 
 setInterval(() => {
     document.querySelector('.wrap-img-slide')
-        .innerHTML = `<img id="slide_img" class="arrive_animate" src="${listImage[iM]}" alt="">`
+        .innerHTML = `<img id="slide_img" class="leave_animate" src="${listImage[iM]}" alt="">`
     iM++;
     if (iM >= listImage.length)
         iM = 0;
-}, 5200)
+}, 5000)
