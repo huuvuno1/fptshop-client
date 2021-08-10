@@ -69,6 +69,11 @@
     margin-top: 33px !important;
     max-height: 168px !important;
 }
+.sale_proc:hover .product_img img{
+    position: relative;
+    transition: 0.6s ease;
+    transform: scale(1.034) !important;
+}
 .pd-5 {
     padding-left: 5px;
     padding-right: 5px;
@@ -202,6 +207,7 @@
 }
 
 .promotion_frame .slide_arrow-left {
+    display: none;
     left: 10px;
 }
 
@@ -218,7 +224,7 @@
 /* list discount */
 
 .fr_head {
-    padding: 10px;
+    padding: 25px 10px 10px 10px;
     font-size: 19px;
 }
 
@@ -240,15 +246,17 @@
 }
 
 .prod_action-hover {
-    display: flex;
-    padding: 10px;
+    display: none;
     border-bottom: 1px solid var(--border-line);
     border-left: 1px solid var(--border-line);
     border-right: 1px solid var(--border-line);
     position: absolute;
     z-index: 999;
     background-color: white;
-
+    width: 100%;
+    left: -1px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 .prod_action-hover a {
     text-decoration: none;
@@ -257,16 +265,24 @@
     text-align: center;
     border-radius: 4px;
     padding: 10px 0;
+    margin-bottom: 15px;
+    margin-top: 15px;
 }
 .prod_action-hover .buynow {
     background-color: #cb1c22;
     width: 160px;
+    margin-left: 10px;
 }
 .prod_action-hover .compare {
     background-color: #99a2aa;
     width: 100px;
+    margin-right: 10px;
 }
 
 .product:hover .prod_action-hover {
     display: flex;
+}
+
+.view_list {
+    margin-bottom: 30px;
 }

@@ -309,6 +309,10 @@ body {
     align-items: center;
 
 }
+
+.v-2 {
+    width: calc(100% / 8);
+}
 .square:hover {
     box-shadow: 0 1px 0px 0 rgb(0 0 0 / 20%), 0 4px 13px 0 rgb(0 0 0 / 19%);
 }
@@ -370,17 +374,17 @@ body {
 
 /* discount_phone */
 .discount_phone {
-    height: 1028px;
+    /* height: 1028px; */
 }
 
 /* discount_laptop */
 .discount_laptop {
-    height: 1028px;
+    /* height: 1028px; */
 }
 
 /* accessory_frame */
 .accessory_frame {
-    height: 320px;
+    /* height: 320px; */
 }
 
 .other_frame {

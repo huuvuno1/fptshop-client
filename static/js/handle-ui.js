@@ -6,6 +6,7 @@ const productsSlide = document.querySelector('#slide_proc');
 
 productsSlide.addEventListener('mousedown', e => {
     xDown = e.clientX - productsSlide.offsetLeft;
+    xCurrent = productsSlide.scrollLeft;
     isDrag = true;
 });
   
@@ -23,6 +24,7 @@ productsSlide.addEventListener('mousemove', e => {
         productsSlide.style = "scroll-behavior: unset;";
         productsSlide.scrollLeft = xCurrent;
         xDown = xNew;
+        hideShowNextSide();
         e.preventDefault();
     }
     
@@ -39,14 +41,29 @@ productsSlide.addEventListener('mouseup', e => {
 
 
 // next list product in list promotion
-document.querySelector("body > div.app > div.container.flex.frame.promotion_frame > div.slide_arrow.slide_arrow-right")
-    .addEventListener('click', () => {
-        productsSlide.style = "scroll-behavior: smooth;";
-        productsSlide.scrollLeft += productsSlide.scrollWidth/4;
-    })
-    
-document.querySelector("body > div.app > div.container.flex.frame.promotion_frame > div.slide_arrow.slide_arrow-left")
-    .addEventListener('click', () => {
-        productsSlide.style = "scroll-behavior: smooth;";
-        productsSlide.scrollLeft -= productsSlide.scrollWidth/4;
+const promotionNext = document.querySelector("body > div.app > div.container.flex.frame.promotion_frame > div.slide_arrow.slide_arrow-right");
+const promotionPrev = document.querySelector("body > div.app > div.container.flex.frame.promotion_frame > div.slide_arrow.slide_arrow-left");
+
+promotionNext.addEventListener('click', async () => {
+    productsSlide.style = "scroll-behavior: smooth;";
+    productsSlide.scrollLeft += productsSlide.offsetWidth;
+    promotionPrev.style.display = "block";
 })
+    
+promotionPrev.addEventListener('click', () => {
+    productsSlide.style = "scroll-behavior: smooth;";
+    productsSlide.scrollLeft -= productsSlide.offsetWidth;
+    hideShowNextSide();
+    promotionNext.style.display = "block";
+})
+
+function hideShowNextSide() {
+    if (productsSlide.scrollLeft <= 0)
+        promotionPrev.style.display = "none";
+    else
+        promotionPrev.style.display = "block";
+    if (productsSlide.scrollLeft >= (productsSlide.scrollWidth - productsSlide.offsetWidth))
+        promotionNext.style.display = "none";
+    else
+        promotionNext.style.display = "block";
+}
