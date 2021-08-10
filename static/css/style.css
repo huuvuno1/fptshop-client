@@ -1,6 +1,7 @@
 :root {
     --color-name-proc: #474c51;
     --border: #5750500d;
+    --border-line: #c9c9c9;
 }
 .noselect {
     -webkit-touch-callout: none;
@@ -365,7 +366,6 @@ body {
 }
 /* sale_middle */
 .sale_middle {
-    height: 800px;
 }
 
 /* discount_phone */

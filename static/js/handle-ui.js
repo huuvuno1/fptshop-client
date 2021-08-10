@@ -11,7 +11,6 @@ productsSlide.addEventListener('mousedown', e => {
   
 productsSlide.addEventListener('mousemove', e => {
     if (isDrag) {
-        e.preventDefault();
         let xNew = e.clientX - productsSlide.offsetLeft;
         xCurrent += -Math.round((xNew - xDown));
         if (xCurrent > productsSlide.scrollWidth) {
@@ -21,8 +20,10 @@ productsSlide.addEventListener('mousemove', e => {
         {
             xCurrent = 0;
         }
+        productsSlide.style = "scroll-behavior: unset;";
         productsSlide.scrollLeft = xCurrent;
         xDown = xNew;
+        e.preventDefault();
     }
     
 });
@@ -34,3 +35,18 @@ window.addEventListener('mouseup', e => {
 productsSlide.addEventListener('mouseup', e => {
     isDrag = false;
 });
+
+
+
+// next list product in list promotion
+document.querySelector("body > div.app > div.container.flex.frame.promotion_frame > div.slide_arrow.slide_arrow-right")
+    .addEventListener('click', () => {
+        productsSlide.style = "scroll-behavior: smooth;";
+        productsSlide.scrollLeft += productsSlide.scrollWidth/4;
+    })
+    
+document.querySelector("body > div.app > div.container.flex.frame.promotion_frame > div.slide_arrow.slide_arrow-left")
+    .addEventListener('click', () => {
+        productsSlide.style = "scroll-behavior: smooth;";
+        productsSlide.scrollLeft -= productsSlide.scrollWidth/4;
+})
