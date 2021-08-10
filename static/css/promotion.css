@@ -1,10 +1,11 @@
 .promotion_frame {
     height: 550px;
-    padding: 25px 10px 10px 10px;
+    padding: 25px 0px 10px 0px;
     flex-direction: column;
 }
 .title {
     display: flex;
+    padding-left: 15px;
 }
 .promotion_frame .title h2, .promotion_frame .title i{
     font-size: 23px;
@@ -27,26 +28,130 @@
     display: none;
 }
 .product {
-    cursor: pointer;
     width: 300px;
     min-width: 300px;
-    padding: 5px;
     box-sizing: border-box;
-    border: 1px solid black;
+    border: none;
+    border-radius: 4px;
 }
-
+.product:hover .product_img{
+    position: relative;
+    transition: 0.2s ease;
+    transform: scale(1.034) !important;
+}
+.product:hover {
+    border-radius: 4px;
+    border: 1px solid rgb(201, 201, 201);
+}
 .sale_proc {
+    background-origin: content-box;
     background-image: url("../img/banner/frame-khuyenmai.png");
     background-repeat: no-repeat;
     background-size: 100%;
 }
 .product_img {
+    position: relative;
+    padding: 8px;
     display: flex;
     justify-content: center;
-    height: 276px;
+    height: 216px;
+    margin-bottom: 5px;
 }
 
+
 .product_img img{
-    margin-top: 33px;
-    max-height: 168px;
+    height: 214px;
 }
+
+.sale_proc img{
+    margin-top: 33px !important;
+    max-height: 168px !important;
+}
+.pd-5 {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.pd-10 {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.bd-r-15 {
+    border-radius: 15px;
+}
+.center {
+    justify-content: center;
+}
+
+.middle {
+    align-items: center;
+}
+
+.txt_center {
+    text-align: center;
+}
+
+.name_proc {
+    color: var(--color-name-proc);
+    font-size: 16px;
+}
+
+.sp-bw {
+    justify-content: space-between;
+}
+
+.endow {
+    flex-direction: column;
+    position: absolute;
+    left: 15px;
+    display: flex;
+    align-items: baseline;
+    bottom: 10px;
+}
+
+.endow .installment {
+    background-color: #ea9d02;
+}
+.endow span {
+    color: white;
+    padding: 4px 6px 4px 10px;
+    border-radius: 7px;
+    font-size: 13px;
+}
+.sale_proc .endow {
+    left: 15px !important;
+    bottom: 25px !important;
+}
+.sale_proc .endow span{
+    border-bottom-left-radius: 0 !important;
+    border-top-left-radius: 0 !important;
+}
+.endow .discount {
+    margin-top: 7px;
+    background-color: #cb1c22;
+}
+
+
+.product_detail {
+    padding: 10px;
+}
+
+.price {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+.promo_price div {
+    text-align: right;
+}
+
+.cost {
+    background-color: #cb1c22;
+    font-size: 18px;
+    height: 28px;
+    line-height: 28px;
+    font-weight: 600;
+    color: white;
+}
+
