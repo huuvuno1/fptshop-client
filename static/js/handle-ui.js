@@ -1,5 +1,6 @@
 // handle slide
 let isDrag = false;
+let isClick = true;
 let xCurrent = 0;
 let xDown = 0;
 const productsSlide = document.querySelector('#slide_proc');
@@ -12,6 +13,7 @@ productsSlide.addEventListener('mousedown', e => {
   
 productsSlide.addEventListener('mousemove', e => {
     if (isDrag) {
+        isClick = false;
         let xNew = e.clientX - productsSlide.offsetLeft;
         xCurrent += -Math.round((xNew - xDown));
         if (xCurrent > productsSlide.scrollWidth) {
@@ -32,12 +34,18 @@ productsSlide.addEventListener('mousemove', e => {
   
 window.addEventListener('mouseup', e => {
     isDrag = false;
+    console.log("up")
 });
 
 productsSlide.addEventListener('mouseup', e => {
     isDrag = false;
 });
-
+productsSlide.addEventListener('click', e => {
+    if (!isClick) {
+        e.preventDefault();
+        isClick = true;
+    }
+})
 
 
 // next list product in list promotion

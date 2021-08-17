@@ -1,5 +1,4 @@
 .promotion_frame {
-    height: 550px;
     padding: 25px 0px 0px 0px;
     flex-direction: column;
     position: relative;
@@ -273,12 +272,24 @@
     width: 160px;
     margin-left: 10px;
 }
+.see_all {
+    display: none;
+}
+.prod_action-hover a {
+    font-size: 16px;
+    font-weight: 16px;
+}
+.prod_action-hover .buynow:hover {
+    background-color: #920e29;
+}
 .prod_action-hover .compare {
     background-color: #99a2aa;
     width: 100px;
     margin-right: 10px;
 }
-
+.prod_action-hover .compare:hover {
+    background-color: #6c757d;
+}
 .product:hover .prod_action-hover {
     display: flex;
 }
@@ -286,3 +297,8 @@
 .view_list {
     margin-bottom: 30px;
 }
+
+.promotion_frame .slide_arrow {
+    outline: none;
+}
+

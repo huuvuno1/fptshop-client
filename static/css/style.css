@@ -79,6 +79,7 @@
 }
 .form-search{
     position: relative;
+    align-items: center;
 }
 
 .form-search input, .form-search button{
@@ -165,11 +166,18 @@ body {
     font-size: 13px;
     line-height: 30px;
 }
-
+.banner_middle img {
+    width: 100%;
+}
 .sale-cd-tit, .sale-cd-timer {
     margin: 0 auto;
 }
-
+.container.frame.banner_bot img {
+    width: 100%;
+}
+.sale-cd-tit img {
+    max-width: 100%;
+}
 .baner_top {
     flex-direction: column;
     position: relative;
@@ -409,4 +417,24 @@ body {
 .footer-bottom {
     background-color: #f2f2f2;
     height: calc(100% - 282px)
+}
+
+/* nav_bar mobile */
+.navbar_mobile-wrap {
+    position: fixed;
+    background-color: gray;
+    height: 100%;
+    width: 100%;
+    opacity: 0.3;
+    z-index: 9999999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.nav_bar {
+    height: 100%;
+    width: 88%;
+    max-width: 400px;
+    background-color: #2183f6;
 }
